@@ -62,7 +62,7 @@ const questions = [
     {
         type: 'checkbox',
         name: 'license',
-        message: 'Please check all lisences:',
+        message: 'Please check the lisence:',
         choices: ['BSD', 'MIT', 'GPL'],
         // we also need to add badge at the top of the readme with license
     },
@@ -78,11 +78,15 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'questions',
-        message: 'How can user reach you if they have any question? Please provide your username at GitHub',
+        name: 'github',
+        message: 'How can user reach you if they have any question? Please provide your username at GitHub:',
     },
-
-
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please provide your email:',
+        //should take this email and print out: To reach me with additional questions use - email.
+    },
 ];
 const promptUser = () => {
     return inquirer.prompt([questions])
@@ -105,7 +109,55 @@ function writeToFile(fileName, data) {
 };
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() { 
+    promptUser().then(response=>{
+        const readMe = `
+        # ${response.title}
+        ![badge for selected license](https://img.shields.io/badge/license-${response.license}-9cf)
+        ## Description
+        
+        ${response.description}
+
+        ## Table of Contents
+        * [Installation](#installation)
+        * [Usage](#usage)
+        * [License](#license)
+        * [Contributing](#contributing)
+        * [Tests](#tests)
+        * [Questions](#questions)
+        
+        ## Installation
+        
+        ${response.installation}
+
+        ## Usage
+
+        ${response.usage}
+
+        ## License
+
+        ${response.license}
+
+        ## Contributing
+
+        ${response.contributing}
+
+        ## Tests
+        
+        To run tests, use the following command:
+        ${response.tests}
+        ## Questions
+        
+        If you have additional questions:
+
+        - you can reach me at my email:  [stepanmatysik@gmail.com](mailto:${response.email})
+
+        OR
+       
+        - find an answer at my [GitHub account](https://github.com/${response.github})
+        `;
+    })
+}
 
 // Function call to initialize app
 init();
