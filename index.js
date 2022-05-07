@@ -63,7 +63,7 @@ const questions = [
         type: 'checkbox',
         name: 'license',
         message: 'Please check the lisence:',
-        choices: ['BSD', 'MIT', 'GPL'],
+        choices: ['BSD', 'MIT', 'EPL'],
         // we also need to add badge at the top of the readme with license
     },
     {
@@ -89,7 +89,9 @@ const questions = [
     },
 ];
 const promptUser = () => {
-    return inquirer.prompt([questions])
+    // console.log("PromptUser")
+    return inquirer.prompt([questions]);
+    //! stoped here
 }
 
 // TODO: Create a function to write README file
@@ -110,53 +112,10 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() { 
+    // console.log('Run function');
     promptUser().then(response=>{
-        const readMe = `
-        # ${response.title}
-        ![badge for selected license](https://img.shields.io/badge/license-${response.license}-9cf)
-        ## Description
-        
-        ${response.description}
-
-        ## Table of Contents
-        * [Installation](#installation)
-        * [Usage](#usage)
-        * [License](#license)
-        * [Contributing](#contributing)
-        * [Tests](#tests)
-        * [Questions](#questions)
-        
-        ## Installation
-        
-        ${response.installation}
-
-        ## Usage
-
-        ${response.usage}
-
-        ## License
-
-        ${response.license}
-
-        ## Contributing
-
-        ${response.contributing}
-
-        ## Tests
-        
-        To run tests, use the following command:
-        ${response.tests}
-        ## Questions
-        
-        If you have additional questions:
-
-        - you can reach me at my email:  [stepanmatysik@gmail.com](mailto:${response.email})
-
-        OR
-       
-        - find an answer at my [GitHub account](https://github.com/${response.github})
-        `;
-    })
+        writeToFile("README.md", generateMarkdown(response));
+    });
 }
 
 // Function call to initialize app
