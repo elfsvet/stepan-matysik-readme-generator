@@ -24,7 +24,69 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+    {
+        type: 'input',
+        name: 'project-name',
+        message: 'What is the title of your project?',
+        // validate: nameInput => {
+        //     if (nameInput) {
+        //         return true;
+        //     } else {
+        //         console.log("Please enter your name!");
+        //         return false;
+        //     }
+        // }
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Please describe your project:',
+    },
+    // { //!here should be table of  content but i don't think we need to ask for that. It should be pretty the save almost all the time.
+    //     type: 'checkboxx',
+    //     name: 'table-of-contents',
+    //     message: 'What Table of Contents you would like to add?',
+    //     choises: []
+    // },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Please give the installation instructions:',
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'What is it project for?',
+    },
+    {
+        type: 'checkbox',
+        name: 'license',
+        message: 'Please check all lisences:',
+        choices: ['BSD', 'MIT', 'GPL'],
+        // we also need to add badge at the top of the readme with license
+    },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'Please list all the people who worked on the project:',
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Please provide us with the information on how to test your project:',
+    },
+    {
+        type: 'input',
+        name: 'questions',
+        message: 'How can user reach you if they have any question? Please provide your username at GitHub',
+    },
+
+
+];
+const promptUser = () => {
+    return inquirer.prompt([questions])
+}
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -35,7 +97,7 @@ function writeToFile(fileName, data) {
                 return;
             }
             resolve({
-                ok:true,
+                ok: true,
                 message: 'File created!'
             });
         });
