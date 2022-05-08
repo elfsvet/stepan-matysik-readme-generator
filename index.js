@@ -92,9 +92,11 @@ const writeToFile = (fileName, data) => {
 // crated a function  with arrow function to ask user questions and use their respond for creating a readme.md file in the main directory. It also get a function we required from another js file in utils folder.
 const init = () => {
     promptUser().then(response => {
-        writeToFile("README.md", generateMarkdown(response));
+        writeToFile("./dist/README.md", generateMarkdown(response));
     });
 };
 
 // Function call to initialize app
 init();
+
+//! add readme link with new recorded video.
