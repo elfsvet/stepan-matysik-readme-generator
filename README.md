@@ -1,11 +1,11 @@
 
-  # ReadME
+  # SM README GEN
 
   ![badge for selected license](https://img.shields.io/badge/license-MIT-9cf)
 
   ## Description
   
-  pretty cool
+    My project is pretty awesome, it helps developers fast create a readme file.
 
   ## Table of Contents
 
@@ -18,11 +18,11 @@
   
   ## Installation
   
-  clone the code
+    You would need to go in the repo on GitHub and clone the code to your local computer. Then open the terminal in the folder you cloned the code.
 
   ## Usage
 
-  for everyone
+    For people who don't want to waste their time on copy/paste and change the text content. It is just turn on and type your readme text.
 
   ## License
 
@@ -30,13 +30,13 @@
 
   ## Contributing
 
-  me
+    Just before you push you would need to pull the last version of readme generator.
 
   ## Tests
   
   To run tests, use the following command:
  
-  as you wish
+    In the terminal inside the code folder, enter: node index.js
 
   ## Questions
   
