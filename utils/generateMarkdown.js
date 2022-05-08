@@ -23,51 +23,55 @@ const renderLicenseSection = license => {
 // creates the readme text with use of the function if we have/don't have license in our readme
 const generateMarkdown = data => {
   // console.log(data);
+  // let's use object destructuring if we have matching keyword and new name. We did it to not use data.keyword.
+  const {title, license, description, installation, usage,contributing, tests, github, email} = data;
   return `
-  # ${data.title}
 
-  ${renderLicenseBadge(data.license)}
-
+  
+  # ${title}
+  
+  ${renderLicenseBadge(license)}
+  
   ## Description
   
-  ${data.description}
+  ${description}
 
   ## Table of Contents
 
   * [Installation](#installation)
   * [Usage](#usage)
-  ${renderLicenseLink(data.license)}
+  ${renderLicenseLink(license)}
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
   
   ## Installation
   
-  ${data.installation}
+  ${installation}
 
   ## Usage
 
-  ${data.usage}
+  ${usage}
 
-  ${renderLicenseSection(data.license)}
+  ${renderLicenseSection(license)}
 
   ## Contributing
 
-  ${data.contributing}
+  ${contributing}
 
   ## Tests
   
   To run tests, use the following command:
  
-  ${data.tests}
+  ${tests}
 
   ## Questions
   
   - If you have additional questions:
 
-    - you can reach me at my email:  [${data.email}](mailto:${data.email})
+    - you can reach me at my email:  [${email}](mailto:${email})
  
-    - find an answer at my [GitHub account](https://github.com/${data.github})
+    - find an answer at my [GitHub account](https://github.com/${github})
   `;
 };
 

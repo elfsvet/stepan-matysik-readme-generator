@@ -1,11 +1,13 @@
 
-  # SM README GEN
 
-  ![badge for selected license](https://img.shields.io/badge/license-MIT-9cf)
-
+  
+  # qerqrqrqwerqwerqw
+  
+  ![badge for selected license](https://img.shields.io/badge/license-BSD,EPL-9cf)
+  
   ## Description
   
-    My project is pretty awesome, it helps developers fast create a readme file.
+  qrqrqwerqe
 
   ## Table of Contents
 
@@ -18,31 +20,31 @@
   
   ## Installation
   
-    You would need to go in the repo on GitHub and clone the code to your local computer. Then open the terminal in the folder you cloned the code.
+  qwerqrqwrqewr
 
   ## Usage
 
-    For people who don't want to waste their time on copy/paste and change the text content. It is just turn on and type your readme text.
+  qwerqwerqwer
 
   ## License
 
-  MIT
+  BSD,EPL
 
   ## Contributing
 
-    Just before you push you would need to pull the last version of readme generator.
+  
 
   ## Tests
   
   To run tests, use the following command:
  
-    In the terminal inside the code folder, enter: node index.js
+  qreqwrqwer
 
   ## Questions
   
   - If you have additional questions:
 
-    - you can reach me at my email:  [stepanmatysik@gmail.com](mailto:stepanmatysik@gmail.com)
+    - you can reach me at my email:  [](mailto:)
  
-    - find an answer at my [GitHub account](https://github.com/elfsvet)
+    - find an answer at my [GitHub account](https://github.com/)
   
