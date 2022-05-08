@@ -24,7 +24,7 @@ const renderLicenseSection = license => {
 const generateMarkdown = data => {
   // console.log(data);
   // let's use object destructuring if we have matching keyword and new name. We did it to not use data.keyword.
-  const {title, license, description, installation, usage,contributing, tests, github, email} = data;
+  const { title, license, description, installation, usage, contributing, tests, github, email } = data;
   return `
 
   
@@ -38,6 +38,7 @@ const generateMarkdown = data => {
 
   ## Table of Contents
 
+  * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
   ${renderLicenseLink(license)}

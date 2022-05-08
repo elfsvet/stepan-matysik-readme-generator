@@ -7,10 +7,11 @@
   
   ## Description
   
-  It's a cool project
+  This project is a readme file generator.
 
   ## Table of Contents
 
+  * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
@@ -20,11 +21,11 @@
   
   ## Installation
   
-  just install it on your pc or mac
+  clone the repo and follow instructions in readme of the project
 
   ## Usage
 
-  for everyone
+  For easy and fast creation of a readme file for your project.
 
   ## License
 
@@ -32,13 +33,13 @@
 
   ## Contributing
 
-  do as you wish
+  Please pull before you push.
 
   ## Tests
   
   To run tests, use the following command:
  
-  test as you like
+  Open terminal in the folder and run node index.js
 
   ## Questions
   

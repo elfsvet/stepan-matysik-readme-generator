@@ -24,10 +24,10 @@ It speeds up the time you spend to create a ReadMe file.
 Project is created with:
 - Node.js
 - JavaScript
-- NPM
+- npm
 
 ## Setup
-To open this project in vscode using git in Terminal/Git Bash:
+> To open this project in vscode using git in Terminal/Git Bash:
 
 ```
 $ mkdir readme_generator
@@ -36,13 +36,15 @@ $ git clone https://github.com/elfsvet/stepan-matysik-readme-generator.git
 $ node index.js
 $ cd dist
 ```
-THe finished readme file will be in dist folder.
+> The finished readme file will be in dist folder.
 
 ## Features
 - Dynamic readme creation
 - license badges
 ## Screenshots
-![Example screenshot](./img/sample.gif)
+> The video link with presentation how this generator works at the top of this ReadMe ⬆️
+![Example screenshot](./img/sample.png)
+
 
 
 ## Usage
