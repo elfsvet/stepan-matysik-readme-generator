@@ -27,7 +27,7 @@ const generateMarkdown = require('./utils/generateMarkdown.js');
 const questions = [
     {
         type: 'input',
-        name: 'project-name',
+        name: 'title',
         message: 'What is the title of your project?',
         // validate: nameInput => {
         //     if (nameInput) {
@@ -44,10 +44,10 @@ const questions = [
         message: 'Please describe your project:',
     },
     // { //!here should be table of  content but i don't think we need to ask for that. It should be pretty the save almost all the time.
-    //     type: 'checkboxx',
+    //     type: 'checkbox',
     //     name: 'table-of-contents',
     //     message: 'What Table of Contents you would like to add?',
-    //     choises: []
+    //     choices: []
     // },
     {
         type: 'input',
@@ -62,7 +62,7 @@ const questions = [
     {
         type: 'checkbox',
         name: 'license',
-        message: 'Please check the lisence:',
+        message: 'Please check the license:',
         choices: ['BSD', 'MIT', 'EPL'],
         // we also need to add badge at the top of the readme with license
     },
@@ -90,8 +90,8 @@ const questions = [
 ];
 const promptUser = () => {
     // console.log("PromptUser")
-    return inquirer.prompt([questions]);
-    //! stoped here
+    return inquirer.prompt(questions);
+    //! stopped here
 }
 
 // TODO: Create a function to write README file
@@ -114,12 +114,14 @@ function writeToFile(fileName, data) {
 function init() { 
     // console.log('Run function');
     promptUser().then(response=>{
+        console.log(response);
         writeToFile("README.md", generateMarkdown(response));
     });
 }
 
 // Function call to initialize app
 init();
+// promptUser();
 
 
 // var inquirer = require('inquirer');
